@@ -1,0 +1,6 @@
+config NF_NDPI
+	tristate "Deep Packet Inspection"
+	depends on NET && INET && NETFILTER
+	depends on (NF_CONNTRACK || NF_CONNTRACK=n)
+	help
+	  Deep Packet Inspection module
